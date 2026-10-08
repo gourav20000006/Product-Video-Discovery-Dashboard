@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Video Discovery Dashboard</title>
+    <meta
+      name="description"
+      content="A dashboard for tracking product video discovery performance."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">P</div>
+          <div>
+            <p class="eyebrow">Insights</p>
+            <h1>Product Video</h1>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a class="nav-item active" href="#overview">Overview</a>
+          <a class="nav-item" href="#performance">Performance</a>
+          <a class="nav-item" href="#videos">Videos</a>
+          <a class="nav-item" href="#audience">Audience</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="label">Campaign health</p>
+          <strong>92%</strong>
+          <span>Strong engagement</span>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar" id="overview">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>Product video discovery</h2>
+          </div>
+          <button class="primary-btn">Export report</button>
+        </header>
+
+        <section class="stats-grid" aria-label="Key metrics">
+          <article class="stat-card accent">
+            <div class="stat-top">
+              <span>Total views</span>
+              <span class="trend up">+18.4%</span>
+            </div>
+            <strong>1.24M</strong>
+            <small>vs last week</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Avg. watch time</span>
+              <span class="trend up">+7.2%</span>
+            </div>
+            <strong>4m 38s</strong>
+            <small>per viewer</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>CTR</span>
+              <span class="trend up">+3.8%</span>
+            </div>
+            <strong>6.9%</strong>
+            <small>click-through rate</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Conversion</span>
+              <span class="trend down">-1.1%</span>
+            </div>
+            <strong>3.2%</strong>
+            <small>from discovery</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel chart-panel" id="performance">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Performance</p>
+                <h3>Discovery funnel</h3>
+              </div>
+              <span class="chip">Last 30 days</span>
+            </div>
+
+            <div class="bars" aria-label="Traffic attribution chart">
+              <div class="bar-group">
+                <span class="bar-label">Impressions</span>
+                <div class="bar-stack"><span class="bar bar-1" style="height: 92%"></span></div>
+              </div>
+              <div class="bar-group">
+                <span class="bar-label">Clicks</span>
+                <div class="bar-stack"><span class="bar bar-2" style="height: 68%"></span></div>
+              </div>
+              <div class="bar-group">
+                <span class="bar-label">Views</span>
+                <div class="bar-stack"><span class="bar bar-3" style="height: 82%"></span></div>
+              </div>
+              <div class="bar-group">
+                <span class="bar-label">Sales</span>
+                <div class="bar-stack"><span class="bar bar-4" style="height: 48%"></span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel audience-panel" id="audience">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Audience</p>
+                <h3>Top segments</h3>
+              </div>
+            </div>
+
+            <ul class="segment-list">
+              <li><span>New customers</span><strong>38%</strong></li>
+              <li><span>Returning buyers</span><strong>29%</strong></li>
+              <li><span>Product researchers</span><strong>21%</strong></li>
+              <li><span>Creators & partners</span><strong>12%</strong></li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="panel table-panel" id="videos">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Catalog</p>
+              <h3>Video discovery leaderboard</h3>
+            </div>
+            <button class="secondary-btn">Filter</button>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Video</th>
+                  <th>Platform</th>
+                  <th>Views</th>
+                  <th>CTR</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="videoTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
